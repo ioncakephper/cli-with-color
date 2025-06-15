@@ -3,6 +3,9 @@
 const { Command } = require("commander");
 const fs = require("fs");
 const path = require("path");
+const logger = require('../src/utils/logger'); // Import the logger
+
+const {buildAction} = require('../src/commands/build');
 
 // Read package.json
 const packageJsonPath = path.resolve(__dirname, "../package.json");
@@ -18,14 +21,17 @@ program
 
 // Add your command definitions here
 program
-  .command("build [patterns...]", {isDefault: true})
+  .command("build [patterns...]", { isDefault: true })
   .alias("b")
   .description("Build the project with specified patterns")
   .summary("Builds the project using the provided patterns.")
   .action((patterns, options) => {
-    require("../src/commands/build.js")(patterns, options);
-    console.log("Starting the application...");
-    // Add your start logic here
+    try {
+      // Add your start logic here
+      buildAction(patterns, options);
+    } catch (error) {
+      logger.error("An error occurred while executing the build command:", error.message);
+    }
   });
 
 // Help output settings
