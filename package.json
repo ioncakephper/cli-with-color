@@ -1,0 +1,11 @@
+{
+  "name": "cli-with-color",
+  "version": "1.0.0",
+  "description": "Practice and tests in using colorize packages (chalk or asci-color)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "author": "ion",
+  "license": "MIT"
+}
