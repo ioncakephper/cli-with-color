@@ -3,12 +3,29 @@
   "version": "1.0.0",
   "description": "Practice and tests in using colorize packages (chalk or asci-color)",
   "main": "index.js",
+  "bin": {
+    "cli-with-color": "./src/cli.js"
+  },
+  "keywords": [
+    "cli",
+    "color",
+    "chalk",
+    "asci-color"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioncakephper/cli-with-color.git"
+  },
   "scripts": {
+    "start": "node index.js",
     "test": "jest --passWithNoTests"
   },
   "author": "ion",
   "license": "MIT",
   "devDependencies": {
     "jest": "^30.0.0"
+  },
+  "dependencies": {
+    "commander": "^14.0.0"
   }
 }
