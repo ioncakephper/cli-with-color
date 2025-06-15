@@ -25,6 +25,9 @@ program
   .alias("b")
   .description("Build the project with specified patterns")
   .summary("Builds the project using the provided patterns.")
+
+  .option('-c, --config <path>', "Path to the configuration file")
+  .option('-i, --ignore <patterns...>', "Patterns to ignore during the build process")
   .action((patterns, options) => {
     try {
       // Add your start logic here

@@ -1,0 +1,8 @@
+{
+    "patterns": [
+        "**/*.outline.yaml",
+        "**/*.outline.yml",
+        "__outlines__/**/*.yaml",
+        "__outlines__/**/*.yml"
+    ]
+}
